@@ -1,3 +1,5 @@
+<p When cloning Chatmallow change the database path at ".env" line 10 (temporary shit before updating to mysql from sqlite)/p>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
