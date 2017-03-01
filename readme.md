@@ -2,6 +2,8 @@
 
 ## Install
 
+## Linux
+
 ### Requierment
 
 * php 7.0 (or newer)
@@ -27,6 +29,10 @@ you should be ready to go ^^ host it and try it
 default user is
 email -> admin@gmail.fr
 pass  -> admin
+
+## Windows
+
+On Windows you should use [Laragon](https://laragon.org/) it contains composer and permit to host the site
 
 ### Used
 
