@@ -18,15 +18,15 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Cat name</label>
-                  <input class="form-control" id="exampleInputEmail1" placeholder="Enter cat name" type="email">
+                  <input class="form-control" id="InputCatName" placeholder="Enter cat name" type="email">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Allowed food per day</label>
-                  <input class="form-control" id="exampleInputPassword1" placeholder="Enter the number of meal per day" type="password">
+                  <input class="form-control" id="InputFood" placeholder="Enter the number of meal per day" type="password">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Badge id</label>
-                  <input class="form-control" id="exampleInputPassword1" placeholder="Enter the badge if of your cat" type="password">
+                  <input class="form-control" id="InputBadgeid" placeholder="Enter the badge id of your cat" type="password">
                 </div>
                 </div>
               <!-- /.box-body -->
