@@ -14,7 +14,8 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" action="{{ route('cats.create') }}" method="post">
+              {!! csrf_field() !!}
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Cat name</label>
