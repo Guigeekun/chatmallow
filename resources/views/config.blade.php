@@ -3,9 +3,9 @@
 @section('title', 'Chatmallow')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Cats</h1>
 @stop
 
 @section('content')
-    <p>You are logged in! lawl</p>
+    <p>Config pages</p>
 @stop

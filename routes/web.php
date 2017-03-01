@@ -21,4 +21,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/cats', 'CatController@index');
 
+Route::get('/config', 'ConfigController@index');
+
 Route::post('/cats', ['as' => 'cats.create', 'use' => 'CatController@store']);

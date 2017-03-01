@@ -109,18 +109,30 @@ return [
     */
 
     'menu' => [
+        [
+            'text' => 'Dashboard'
+            'Icon' => 'tachometer'
+        ],
         'SUIVI',
         [
             'text'        => 'Graphique',
-            'url'         => '/stats',
             'icon'        => 'area-chart',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
         [
             'text' => 'Cats',
             'url'  => '/cats',
             'icon' => 'paw',
+        ],
+        'COMMANDES',
+        [
+            'text' => 'Fontaine On/Off',
+            'icon' => 'tint',
+        ],
+        'PARAMETRES',
+        [
+            'text' => 'Paramètres',
+            'url' => '/config',
+            'icon' => 'cogs',
         ],
     ],
 
