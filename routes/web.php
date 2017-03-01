@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/cats', 'CatController@index');
+Route::post('/cats', ['as' => 'cats.create', 'use' => 'CatController@store']);
