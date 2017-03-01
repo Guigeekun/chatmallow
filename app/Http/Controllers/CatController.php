@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\auth;
+namespace App\Http\Controllers;
 
 use App\cat;
 use App\Http\Controllers\Controller;
@@ -13,8 +13,8 @@ class CatController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function index()
     {
-        //
+        return view('cats');
     }
 }
