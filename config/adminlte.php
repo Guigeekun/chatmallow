@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Chat</b>mallow',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<b>C</b>mw',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,28 +108,23 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'SUIVI',
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
         ],
         [
-            'text'        => 'Pages',
+            'text'        => 'Graphique',
             'url'         => 'admin/pages',
-            'icon'        => 'file',
+            'icon'        => 'area-chart',
             'label'       => 4,
             'label_color' => 'success',
         ],
-        'ACCOUNT SETTINGS',
+        'SETTINGS',
         [
             'text' => 'Cats',
             'url'  => '/cats',
             'icon' => 'paw',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
         ],
         [
             'text'    => 'Multilevel',

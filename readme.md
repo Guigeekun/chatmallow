@@ -2,8 +2,6 @@
 
 ## Install
 
-## Linux
-
 ### Requierment
 
 * php 7.0 (or newer)
@@ -13,10 +11,12 @@
 
 ### How to
 
+be sure to have ".env" config with your Database line 7 to 12
+
+## Linux
+
 When cloning the project don't forget to create the vendors (they are not versioned) do
 `composer install` in the project folder
-
-be sure to have ".env" config with your Database line 7 to 12
 
 `php artisan key:generate` to create the app key
 
@@ -25,10 +25,6 @@ be sure to have ".env" config with your Database line 7 to 12
 `php artisan migrate`
 
 you should be ready to go ^^ host it and try it
-
-default user is
-email -> admin@gmail.fr
-pass  -> admin
 
 ## Windows
 
