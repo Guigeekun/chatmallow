@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Chatmallow',
 
     'title_prefix' => '',
 
@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<img src="../img/LogoFull.png" class="logo-img">',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<img src="../img/LogoMini.png" style="width: 100%; height: 50px">',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
 
     'login_url' => 'login',
 
-    'register_url' => 'register',
+    'register_url' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -108,28 +108,23 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'SUIVI',
         [
             'text' => 'Blog',
             'url'  => 'admin/blog',
         ],
         [
-            'text'        => 'Pages',
+            'text'        => 'Graphique',
             'url'         => 'admin/pages',
-            'icon'        => 'file',
+            'icon'        => 'area-chart',
             'label'       => 4,
             'label_color' => 'success',
         ],
-        'ACCOUNT SETTINGS',
+        'SETTINGS',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
+            'text' => 'Cats',
+            'url'  => '/cats',
+            'icon' => 'paw',
         ],
         [
             'text'    => 'Multilevel',
