@@ -3235,6 +3235,11 @@ table.text-center th {
   margin-bottom: 25px;
   font-weight: 300;
 }
+.login-logo img,
+.register-logo img{
+  padding: auto;
+  height: 90px;
+}
 .login-logo a,
 .register-logo a {
   color: #444;
