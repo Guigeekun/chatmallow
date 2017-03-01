@@ -110,8 +110,8 @@ return [
 
     'menu' => [
         [
-            'text' => 'Dashboard'
-            'Icon' => 'tachometer'
+            'text' => 'Dashboard',
+            'Icon' => 'tachometer',
         ],
         'SUIVI',
         [
