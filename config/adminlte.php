@@ -109,11 +109,12 @@ return [
     */
 
     'menu' => [
+        'SUIVI',
         [
             'text' => 'Dashboard',
-            'Icon' => 'tachometer',
+            'url' => '/home',
+            'icon' => 'tachometer',
         ],
-        'SUIVI',
         [
             'text'        => 'Graphique',
             'icon'        => 'area-chart',
