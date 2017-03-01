@@ -17,4 +17,10 @@ class CatController extends Controller
     {
         return view('cats');
     }
+
+
+    public function store()
+    {
+
+    }
 }

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
 
 Auth::routes();
@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/cats', 'CatController@index');
+
+Route::post('/cats', ['as' => 'cats.create', 'use' => 'CatController@store']);
