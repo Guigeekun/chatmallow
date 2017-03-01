@@ -7,27 +7,26 @@
 @stop
 
 @section('content')
-    <p>You're in cat section ... omg it works</p>
+
     <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Add a cat</h3>
+              <h3 class="box-title">Ajoutez Vos chats ici</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="{{ route('cats.create') }}" method="post">
-              {!! csrf_field() !!}
+            <form role="form">
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Cat name</label>
-                  <input class="form-control" id="InputCatName" placeholder="Enter cat name" type="name">
+                  <input class="form-control" id="exampleInputEmail1" placeholder="Enter cat name" type="email">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Allowed food per day</label>
-                  <input class="form-control" id="InputFood" placeholder="Enter the number of meal per day" type="int">
+                  <input class="form-control" id="exampleInputPassword1" placeholder="Enter the number of meal per day" type="password">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Badge id</label>
-                  <input class="form-control" id="InputBadgeid" placeholder="Enter the badge id of your cat" type="string">
+                  <input class="form-control" id="exampleInputPassword1" placeholder="Enter the badge if of your cat" type="password">
                 </div>
                 </div>
               <!-- /.box-body -->

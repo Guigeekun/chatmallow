@@ -13,11 +13,11 @@ class CatController extends Controller
      * @param  int  $id
      * @return Response
      */
-
     public function index()
     {
         return view('cats');
     }
+
 
     public function store()
     {

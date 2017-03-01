@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Chatmallow',
 
     'title_prefix' => '',
 
@@ -30,9 +30,10 @@ return [
     |
     */
 
-    'logo' => '<b>Chat</b>mallow',
+    'logo' => '<img src="../img/LogoFull.png" class="logo-img">',
 
-    'logo_mini' => '<b>C</b>mw',
+    'logo_mini' => '<img src="../img/LogoMini.png" style="width: 100%; height: 50px">',
+
 
     /*
     |--------------------------------------------------------------------------
