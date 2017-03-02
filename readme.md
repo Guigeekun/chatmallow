@@ -7,7 +7,7 @@
 * php 7.0 (or newer)
 * composer
 * mySQL
-* apache server (to run it)
+* apache server (only on prod)
 
 ### How to
 
@@ -25,6 +25,15 @@ When cloning the project don't forget to create the vendors (they are not versio
 `php artisan migrate`
 
 you should be ready to go ^^ host it and try it
+
+use `php artisan serve` to start it
+
+use `php artisan db:seed` to create a first user in the database use it to connect yourself
+
+default user is
+* mail : admin@gmail.com
+* pass : admin
+* name : admin
 
 ## Windows
 
