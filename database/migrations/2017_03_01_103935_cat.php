@@ -13,13 +13,14 @@ class Cat extends Migration
      */
     public function up()
     {
-      Schema::create('cats', function (Blueprint $table) {
-        $table->increments('id');
-        $table->string('name');
-        $table->integer('icon');
-        $table->string('badgeid');
-        $table->integer('allowedfood');
-      });
+        Schema::create('cats', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->integer('icon');
+            $table->string('badgeid');
+            $table->integer('allowedfood');
+            $table->timestamps();
+        });
     }
 
     /**

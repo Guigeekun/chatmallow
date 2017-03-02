@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class cat extends Model
+class Cat extends Model
 {
 
   /**

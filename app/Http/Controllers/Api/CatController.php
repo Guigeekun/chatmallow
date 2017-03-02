@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Cat;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CatController extends Controller
@@ -15,17 +16,7 @@ class CatController extends Controller
      */
     public function index()
     {
-        return view('cats.index', ['cats' =>  Cat::all()]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return Cat::all();
     }
 
     /**
@@ -38,6 +29,7 @@ class CatController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255'
+            'icon' => 'required',
         ]);
 
         $cat = new Cat;

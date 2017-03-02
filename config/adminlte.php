@@ -86,7 +86,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 
@@ -112,7 +112,7 @@ return [
         'SUIVI',
         [
             'text' => 'Dashboard',
-            'url' => '/home',
+            'url' => '/',
             'icon' => 'tachometer',
         ],
         [
@@ -121,8 +121,17 @@ return [
         ],
         [
             'text' => 'Cats',
-            'url'  => '/cats',
             'icon' => 'paw',
+            'submenu' => [
+                [
+                    'text' => 'List',
+                    'url'  => '/cats',
+                ],
+                [
+                    'text'    => 'Ajouter',
+                    'url'     => '/cats/create',
+                ],
+            ]
         ],
         'COMMANDES',
         [
