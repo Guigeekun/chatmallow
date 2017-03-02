@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Cat;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CatController extends Controller
 {
@@ -16,7 +17,10 @@ class CatController extends Controller
      */
     public function index()
     {
-        return Cat::all();
+        return response()->json([
+            'success' => true,
+            'data' => Cat::all()
+        ]);
     }
 
     /**
@@ -28,7 +32,7 @@ class CatController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:255'
+            'name' => 'required|max:255',
             'icon' => 'required',
         ]);
 
