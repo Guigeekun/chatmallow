@@ -4,7 +4,7 @@
 
 ### Requierment
 
-* php 7.0 (or newer)
+* php 7.0 (or newer)(and php7.0-xml)
 * composer
 * mySQL
 * apache server (only on prod)
