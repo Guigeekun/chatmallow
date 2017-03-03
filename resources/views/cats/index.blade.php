@@ -26,7 +26,7 @@
                 <td>{{$cat->id}}</td>
                 <td>{{$cat->name}}</td>
                 <td>{{$cat->created_at}}</td>
-                <td>{{$cat->icon}}</td>
+                <td><img src="../img/catIcon/{{$cat->icon}}.png"></td>
               </tr>
             @endforeach
           </tbody>

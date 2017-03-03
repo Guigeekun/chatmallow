@@ -23,32 +23,34 @@ class HomeController extends Controller
      $timeline = [];
      foreach ($actions as $event){
        switch($event->type){
-         case 0:
-            $info = ;
-            $msgContent = ;
-            break;
          case 1:
-            $info = ;
-            $msgContent = ;
             break;
          case 2:
-            $info = ;
-            $msgContent = ;
             break;
          case 3:
-            $info = ;
-            $msgContent = ;
+            $info = "Fontaine";
+            $msgContent = "L'état de la fontaine à été changé.";
+            $icon = "fa-tint";
             break;
           case 4:
-            $info = ;
-            $msgContent = ;
+            $info = "Distribution manuelle de croquette";
+            $msgContent = "Des croquettes ont été distribués manuellement.";
+            $icon = "fa-cutlery";
+            break;
+          default:
+            $catName = DB::table('cats')->where('badgeid', $event->type)->first()->name;
+            $info = "Distribution de croquettes";
+            $msgContent = $catName + " a mangé ses croquettes.";
+            $icon = "fa-cutlery";
             break;
        }
         $events = array('date' => explode(" ", $event->created_at)[0],
                         'hour' => explode(" ", $event->created_at)[1],
                         'type' => $info,
-                        'MSGcontent' => $msgContent);
-        $timeline
+                        'MSGcontent' => $msgContent,
+                        'icon' => $icon);
+
+        array_push($timeline, $events);
     };
 
 
@@ -68,6 +70,8 @@ Symboles utilisés pour identifier les variables:
                 |                                     |--/type
                 |                                     |
                 |                                     |--/MSGcontent
+                |                                     |
+                |                                     |--/icon
                 |
                 |--^DateEvent2--|--/date
                                 |
@@ -76,7 +80,8 @@ Symboles utilisés pour identifier les variables:
                                                       |--/type
                                                       |
                                                       |--/MSGcontent
-
+                                                      |
+                                                      |--/icon
 */
 
       return view('home', ['timeline' => $actions]); //Query limité à un historique des 30 derniers events; on lit directement $action tant que le code est WIP.

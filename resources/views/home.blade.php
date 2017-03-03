@@ -30,7 +30,7 @@
     <li>
         <i class="fa fa-rocket bg-blue"></i>
         <div class="timeline-item">
-            <span class="time"><i class="fa fa-clock-o"></i> {{$event->hour}}</span>
+            <span class="time"><i class="fa {{$event->icon}}"></i> {{$event->hour}}</span>
 
             <h3 class="timeline-header"><a>{{$event->type}}</a></h3>
             <div class="timeline-body">
