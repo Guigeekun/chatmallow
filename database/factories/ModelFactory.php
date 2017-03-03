@@ -20,6 +20,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
-        'api_token' => str_random(60),
+        'api_token' => str_random(30),
+    ];
+});
+
+$factory->define(App\cats::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'icon' => $faker->icon,
+        'badgeid' => $faker ->badgeid,
+        'allowedfood' => $faker ->allowedfood,
     ];
 });
