@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-xs-12">
       <div class="box" id="catTableBox">
-        <div class="box-body table-responsive no-padding">
+        <div class="box-body table-responsive">
           <table id="catTable" class="table table-hover">
             <thead>
               <tr>
@@ -48,7 +48,6 @@ $(function(){$('#catTable').dataTable({
     "language": { infoEmpty: "There are no cats here.",
                 emptyTable: "There are no cats here.",
                 zeroRecords: "There are no cats here."
-    },
-  });});
+},});});
 </script>
 @stop

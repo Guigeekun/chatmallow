@@ -17,7 +17,6 @@ class DatabaseSeeder extends Seeder
           'password' => bcrypt('admin'),
           'api_token' => str_random(60),
         ]);
-
         //factory(App\User::class, 2)->create();
     }
 }
