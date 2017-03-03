@@ -126,10 +126,12 @@ return [
                 [
                     'text' => 'List',
                     'url'  => '/cats',
+                    'icon' => 'list'
                 ],
                 [
                     'text'    => 'Ajouter',
                     'url'     => '/cats/create',
+                    'icon' => 'plus'
                 ],
             ]
         ],

@@ -35,10 +35,15 @@ default user is
 * pass : admin
 * name : admin
 
+In order to use laravel-mix, use `npm install` (`npm install --no-bin-links` for windows systems !) to install laravel Mix (for assets and scripts.)
+more: ( https://laravel.com/docs/5.4/mix#running-mix )
+
+Then, if you want to compile your assets, use `npm run production` (or `npm run dev` for a uncompressed version of assets files.)
+
 ## Windows
 
 On Windows you should use [Laragon](https://laragon.org/) it contains composer and permit to host the site
 
 ### Used
 
-This project use [Laravel](https://laravel.com/) and [AdminLTE](https://almsaeedstudio.com/themes/AdminLTE/index2.html)
+This project use [Laravel](https://laravel.com/) and [AdminLTE for laravel](https://packagist.org/packages/jeroennoten/laravel-adminlte)
