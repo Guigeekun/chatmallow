@@ -17,7 +17,7 @@
                 <th>ID</th>
                 <th>name</th>
                 <th>created</th>
-                <th>updated</th>
+                <th>Icon</th>
               </tr>
             </thead>
           <tbody>
@@ -26,7 +26,7 @@
                 <td>{{$cat->id}}</td>
                 <td>{{$cat->name}}</td>
                 <td>{{$cat->created_at}}</td>
-                <td>{{$cat->updated_at}}</td>
+                <td>{{$cat->icon}}</td>
               </tr>
             @endforeach
           </tbody>
@@ -38,7 +38,6 @@
   </div>
 </div>
 @stop
-
 @section('js')
 <script>
 $(function(){$('#catTable').dataTable({

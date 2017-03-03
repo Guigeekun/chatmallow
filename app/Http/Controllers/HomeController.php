@@ -15,27 +15,45 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $actions =  Actions::where('type','info')
+      $actions =  Actions::where('type', 'info')
                           ->limit(30)
                           ->orderBy('created_at', 'asc');
 
 /*########## Code WIP ##########
      $timeline = [];
      foreach ($actions as $event){
-
-        $info
-        $msgContent
+       switch($event->type){
+         case 0:
+            $info = ;
+            $msgContent = ;
+            break;
+         case 1:
+            $info = ;
+            $msgContent = ;
+            break;
+         case 2:
+            $info = ;
+            $msgContent = ;
+            break;
+         case 3:
+            $info = ;
+            $msgContent = ;
+            break;
+          case 4:
+            $info = ;
+            $msgContent = ;
+            break;
+       }
         $events = array('date' => explode(" ", $event->created_at)[0],
                         'hour' => explode(" ", $event->created_at)[1],
                         'type' => $info,
-                        'MSGcontent' => $msgContent,
-                      );
+                        'MSGcontent' => $msgContent);
         $timeline
     };
 
 
 
-########## Construction de la variable $timeline et hierarchie de sa lecture dans home.blade ##########
+/*########## Construction de la variable $timeline et hierarchie de sa lecture dans home.blade ##########
 
 Symboles utilisés pour identifier les variables:
       ^tableau

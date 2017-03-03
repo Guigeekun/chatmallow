@@ -116,10 +116,6 @@ return [
             'icon' => 'tachometer',
         ],
         [
-            'text'        => 'Graphique',
-            'icon'        => 'area-chart',
-        ],
-        [
             'text' => 'Cats',
             'icon' => 'paw',
             'submenu' => [
