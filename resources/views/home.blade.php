@@ -39,7 +39,6 @@
         </div>
     </li>
   @endforeach
-
 @endforeach
     <li class="time-label">
         <span class="bg-red">
