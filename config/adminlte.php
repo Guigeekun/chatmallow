@@ -114,10 +114,12 @@ return [
             'text' => 'Dashboard',
             'url' => '/',
             'icon' => 'tachometer',
+            'active' => ['/'],
         ],
         [
             'text' => 'Cats',
             'icon' => 'paw',
+            'active' => ['cats', 'catsstore'],
             'submenu' => [
                 [
                     'text' => 'List',
@@ -135,6 +137,10 @@ return [
         [
             'text' => 'Fontaine On/Off',
             'icon' => 'tint',
+        ],
+        [
+            'text' => 'Distribution forcée',
+            'icon' => 'cutlery',
         ],
         'PARAMETRES',
         [

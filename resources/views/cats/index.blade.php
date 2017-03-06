@@ -14,19 +14,21 @@
           <table id="catTable" class="table table-hover">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>name</th>
-                <th>created</th>
                 <th>Icon</th>
+                <th>name</th>
+                <th>ID</th>
+                <th>Created at</th>
+                <th>Food per day</th>
               </tr>
             </thead>
           <tbody>
             @foreach ($cats as $cat)
               <tr>
-                <td>{{$cat->id}}</td>
-                <td>{{$cat->name}}</td>
-                <td>{{$cat->created_at}}</td>
                 <td><img src="../img/catIcon/{{$cat->icon}}.png"></td>
+                <td>{{$cat->name}}</td>
+                <td>{{$cat->id}}</td>
+                <td>{{$cat->created_at}}</td>
+                <td>{{$cat->allowedfood}}</td>
               </tr>
             @endforeach
           </tbody>
