@@ -24,11 +24,11 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\cats::class, function (Faker\Generator $faker) {
+$factory->define(App\Cat::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'icon' => $faker->icon,
-        'badgeid' => $faker ->badgeid,
-        'allowedfood' => $faker ->allowedfood,
+        'icon' => int_random(1)->icon,
+        'badgeid' => str_random(5) ->badgeid,
+        'allowedfood' => int_random(1) ->allowedfood,
     ];
 });

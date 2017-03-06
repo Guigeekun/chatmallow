@@ -38,12 +38,14 @@ class CatController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255'
+          /*  'badgeid'=> 'required|max:10'
+            'icon'=> 'required|max:2' */
         ]);
 
         $cat = new Cat;
         $cat->name = $request->name;
         $cat->save();
-        return redirect('/cats');
+        return redirect('/cat');
     }
 
     /**
