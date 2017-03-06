@@ -126,7 +126,7 @@ return [
                 ],
                 [
                     'text'    => 'Ajouter',
-                    'url'     => '/cats/create',
+                    'url'     => '/catsstore',
                     'icon' => 'plus'
                 ],
             ]

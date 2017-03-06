@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index');
 
     Route::get('/cats', 'CatController@index');
-    Route::get('/catsstore', 'CatController@store');
+    Route::get('/catsstore', 'CatController@create');
     Route::post('/cats', ['as' => 'cats.create', 'uses' => 'CatController@store']);
 
     Route::get('/config', 'ConfigController@index');
