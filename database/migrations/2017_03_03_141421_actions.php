@@ -18,6 +18,7 @@ class Actions extends Migration
           $table->string('type');
           $table->integer('devices_id');
           $table->timestamps();
+          $table->integer('executed');
       });
     }
 
