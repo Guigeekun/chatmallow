@@ -28,7 +28,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Cat::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'icon' => $faker->imageUrl(300, 300, 'cats'),
+      //  'icon' => $faker->imageUrl(300, 300, 'cats'),
+        'icon' => '1',
         'badgeid' => str_random(10),
         'allowedfood' => $faker->randomDigitNotNull,
     ];
