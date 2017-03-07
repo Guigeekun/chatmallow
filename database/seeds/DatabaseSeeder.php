@@ -23,31 +23,13 @@ class DatabaseSeeder extends Seeder
           'badgeid' => 'fgrey5542bc',
           'allowedfood' => '14',
         ]);
-        DB::table('cats')->insert([
-          'name' => 'lawl',
-          'icon' => '2',
-          'badgeid' => 'fgrey5542bc',
-          'allowedfood' => '14',
-        ]);
-        DB::table('cats')->insert([
-          'name' => 'lawl',
-          'icon' => '2',
-          'badgeid' => 'fgrey5542bc',
-          'allowedfood' => '14',
-        ]);
-        DB::table('cats')->insert([
-          'name' => 'lawl',
-          'icon' => '2',
-          'badgeid' => 'fgrey5542bc',
-          'allowedfood' => '14',
-        ]);
+
+        factory('App\Cat', 10)->create();
+
+      /*  Model::unguard();*/
 
 
-      /*  Model::unguard();
-
-        factory('App\Cat',10)->create();
-
-        Model::reguard(); */
+        /*Model::reguard(); */
         //factory(App\User::class, 2)->create();
     }
 }

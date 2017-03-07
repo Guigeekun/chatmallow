@@ -24,11 +24,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
+// Documentation for $faker: https://github.com/fzaninotto/Faker
 $factory->define(App\Cat::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'icon' => int_random(1)->icon,
-        'badgeid' => str_random(5) ->badgeid,
-        'allowedfood' => int_random(1) ->allowedfood,
+        'icon' => $faker->imageUrl(300, 300, 'cats'),
+        'badgeid' => str_random(10),
+        'allowedfood' => $faker->randomDigitNotNull,
     ];
 });
