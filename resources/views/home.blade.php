@@ -22,45 +22,24 @@
 <ul class="timeline">
 @foreach ($timeline as $events)
     <li class="time-label">
-        <span class="bg-red">
-            {{ $events->date}}
+        <span class="bg-{{$color}}">
+            {{$events[0]['date']}}
         </span>
     </li>
-  @foreach ($events->events as $event)
+  @foreach ($events as $event)
     <li>
-        <i class="fa fa-rocket bg-blue"></i>
+        <i class="fa {{$event['icon']}} bg-{{$event['color']}}"></i>
         <div class="timeline-item">
-            <span class="time"><i class="fa {{$event->icon}}"></i> {{$event->hour}}</span>
+            <span class="time"><i class="fa fa-clock-o"></i> {{$event['hour']}}</span>
 
-            <h3 class="timeline-header"><a>{{$event->type}}</a></h3>
+            <h3 class="timeline-header"><a>{{$event['type']}}</a></h3>
             <div class="timeline-body">
-              <p>{{$event->MSGcontent}}</p>
+              <p>{{$event['MSGcontent']}}</p>
             </div>
         </div>
     </li>
   @endforeach
 @endforeach
-    <li class="time-label">
-        <span class="bg-red">
-            03 March. 2017
-        </span>
-    </li>
-    <!-- /.timeline-label -->
-    <!-- timeline item -->
-    <li>
-        <!-- timeline icon -->
-        <i class="fa fa-rocket bg-blue"></i>
-        <div class="timeline-item">
-            <span class="time"><i class="fa fa-clock-o"></i> 15:47</span>
-
-            <h3 class="timeline-header"><a href="">It lives !!</a></h3>
-
-            <div class="timeline-body">
-              <p>First launch of Chatmallow</p>
-              <img src="../img/LogoMini.png" width="50%"></img>
-            </div>
-        </div>
-    </li>
     <!-- END timeline item -->
     <li>
       <i class="fa fa-clock-o bg-gray"></i>
