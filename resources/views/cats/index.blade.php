@@ -24,7 +24,7 @@
           <tbody>
             @foreach ($cats as $cat)
               <tr>
-                <td><img src="../img/catIcon/{{$cat->icon}}.png"></td>
+                <td><img src="../img/catIcon/{{$cat->icon}}.png" width="50px"></td>
                 <td>{{$cat->name}}</td>
                 <td>{{$cat->id}}</td>
                 <td>{{$cat->created_at}}</td>
