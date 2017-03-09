@@ -35,7 +35,7 @@ class CatController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    
+    {
         $this->validate($request, [
             'name' => 'required|max:255'
           /*  'badgeid'=> 'required|max:10'
