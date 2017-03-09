@@ -25,6 +25,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         factory('App\Cat', 10)->create();
+        DB::table('actions')->insert([
+          'type' => 'fgrey5542bc',
+          'devices_id' => '1',
+          'executed' => '0',
+          'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
+          'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
+        ]);
 
       /*  Model::unguard();*/
 
