@@ -29,6 +29,6 @@ class Actions extends Migration
      */
     public function down()
     {
-        //
+      Schema::dropIfExists('actions');
     }
 }
