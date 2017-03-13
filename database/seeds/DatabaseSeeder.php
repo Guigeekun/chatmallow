@@ -11,22 +11,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->delete();
         DB::table('users')->insert([
           'name' => 'admin',
           'email' => 'admin@gmail.com',
           'password' => bcrypt('admin'),
           'api_token' => str_random(30),
         ]);
-        DB::table('cats')->insert([
-          'name' => 'lawl',
-          'icon' => '2',
-          'badgeid' => 'fgrey5542bc',
-          'allowedfood' => '14',
-        ]);
 
+        DB::table('cats')->delete();
         factory('App\Cat', 10)->create();
+
+        DB::table('actions')->delete();
         DB::table('actions')->insert([
-          'type' => 'fgrey5542bc',
+          'type' => '4',
           'devices_id' => '1',
           'executed' => '0',
           'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
