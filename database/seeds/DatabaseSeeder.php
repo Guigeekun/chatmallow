@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('actions')->delete();
         DB::table('actions')->insert([
-          'type' => 'fgrey5542bc',
+          'type' => '4',
           'devices_id' => '1',
           'executed' => '0',
           'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
