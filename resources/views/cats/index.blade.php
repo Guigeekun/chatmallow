@@ -19,6 +19,7 @@
                 <th>ID</th>
                 <th>Created at</th>
                 <th>Food per day</th>
+                <th>Delete ?</th>
               </tr>
             </thead>
           <tbody>
@@ -29,6 +30,11 @@
                 <td>{{$cat->id}}</td>
                 <td>{{$cat->created_at}}</td>
                 <td>{{$cat->allowedfood}}</td>
+                <td>
+                  <form role="form" action="{{route('cats.delete')}}" method="POST">
+                    {!! csrf_field() !!}
+                    <button type="submit" class="btn btn-primary" value="{{$cat->id}}"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </td>
               </tr>
             @endforeach
           </tbody>
