@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\RedirectsUsers, Illuminate\Foundation\Auth\Thrott
 use Illuminate\Cache\RateLimiter;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Lang;
 
 class LoginController extends Controller
 {
@@ -73,9 +74,7 @@ class LoginController extends Controller
      */
     protected function validateLogin(Request $request)
     {
-      $this->validate($request, [
-          $this->username() => 'required', 'password' => 'required',
-      ]);
+      $this->validate($request, ['password' => 'required',]);
     }
 
     /**
@@ -99,7 +98,7 @@ class LoginController extends Controller
      */
     protected function credentials(Request $request)
     {
-        return $request->only($this->username(), 'password');
+        return ['email' => "admin@gmail.com", 'password' => $request->only('password')['password']];
     }
 
     /**
@@ -138,7 +137,7 @@ class LoginController extends Controller
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        $errors = [$this->username() => trans('auth.failed')];
+        $errors = ['password' => trans('auth.failed')];
 
         if ($request->expectsJson()) {
             return response()->json($errors, 422);
@@ -223,7 +222,7 @@ class LoginController extends Controller
 
         $message = Lang::get('auth.throttle', ['seconds' => $seconds]);
 
-        $errors = [$this->username() => $message];
+        $errors = ['password' => $message];
 
         if ($request->expectsJson()) {
             return response()->json($errors, 423);
