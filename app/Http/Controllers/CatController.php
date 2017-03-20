@@ -36,17 +36,23 @@ class CatController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required|max:255'
-          /*  'badgeid'=> 'required|max:10'
-            'icon'=> 'required|max:2' */
-        ]);
+      $this->validate($request, [
+          'name' => 'required|max:255',
+          'badgeid' => 'required|max:255',
+          'icon'=> 'required|max:2',
+          'allowedfood' => 'required'
+      ]);
 
-        $cat = new Cat;
-        $cat->name = $request->name;
-        $cat->save();
-        return redirect('/cat');
-    }
+    $cat = new Cat;
+      $name = $request->input('name');
+      $request->name('badgeid');
+      $request->name('icon');
+      $request->name('allowedfood');
+           $cat->save();
+           dd($request);
+
+    return view('cats.index', ['cats' =>  Cat::all()]);
+  }
 
     /**
      * Display the specified resource.
