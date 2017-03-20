@@ -12,6 +12,7 @@
 ### How to
 
 be sure to have ".env" config with your Database line 7 to 12
+you can rename ".env.exemple" and complete it
 
 ## Linux
 
@@ -22,23 +23,22 @@ When cloning the project don't forget to create the vendors (they are not versio
 
 `php artisan migrate:install` to migrate the database (be sure to have the database, he won't create it)
 
-`php artisan migrate`
-
-you should be ready to go ^^ host it and try it
-
-use `php artisan serve` to start it
-
-use `php artisan db:seed` to create a first user in the database use it to connect yourself
-
-default user is
-* mail : admin@gmail.com
-* pass : admin
-* name : admin
+`php artisan migrate` to prepare your database for Chatmallow
+`php artisan db:seed` and to create default things
 
 In order to use laravel-mix, use `npm install` (`npm install --no-bin-links` for windows systems !) to install laravel Mix (for assets and scripts.)
 more: ( https://laravel.com/docs/5.4/mix#running-mix )
 
 Then, if you want to compile your assets, use `npm run production` (or `npm run dev` for a uncompressed version of assets files.)
+
+you should be ready to go ^^ host it and try it
+
+use `php artisan serve` to start it
+
+default user is
+* mail : admin@gmail.com
+* pass : admin
+* name : admin
 
 ## Windows
 
