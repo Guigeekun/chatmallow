@@ -32,6 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/cats', 'CatController@index');
     Route::get('/catscreate', 'CatController@create');
     Route::post('/catscreate', ['as' => 'cats.create', 'uses' => 'CatController@store']);
+    Route::post('/catscreate', ['as' => 'cats.delete', 'uses' => 'CatController@destroy']);
 
     Route::get('/config', 'ConfigController@index');
 });

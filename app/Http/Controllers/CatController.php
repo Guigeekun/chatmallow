@@ -94,8 +94,9 @@ return redirect('/cats');
      * @param  \App\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cat $cat)
+    public function destroy(Cat $id)
     {
-        //
+      $cat = Cat::find($id);
+      $cat->delete();
     }
 }
