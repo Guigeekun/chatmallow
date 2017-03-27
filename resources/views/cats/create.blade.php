@@ -31,7 +31,14 @@
                 </div>
                 <div class="form-group">
                   <label>Icon</label>
-                  <input class="form-control" name="icon" placeholder="Enter an Icon ID">
+                  <div>
+                    <select name="icon">
+                      <?php foreach ( range(1,39) as $id):
+                          echo '<option value="'.$id.'">'.$id.'</option>';
+                      endforeach; ?>
+                    </select>
+                    <img id="catIcon" width="70px" src="">
+                  </div>
                 </div>
                 </div>
               <!-- /.box-body -->
@@ -40,4 +47,14 @@
               </div>
             </form>
           <!-- /.box --></div>
+@stop
+@section('js')
+<script>
+$(function(){
+  $("#catIcon").attr("src", "../img/catIcon/"+$('[name="icon"]').val()+".png")
+  $('[name="icon"]').change(function(){
+    $("#catIcon").attr("src", "../img/catIcon/"+$('[name="icon"]').val()+".png")
+  });
+});
+</script>
 @stop
