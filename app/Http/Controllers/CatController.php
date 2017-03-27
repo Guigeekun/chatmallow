@@ -91,12 +91,13 @@ return redirect('/cats');
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cat  $cat
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cat $id)
+    public function destroy(Request $request)
     {
-      $cat = Cat::find($id);
+      $cat = Cat::find($request->id);
       $cat->delete();
+      return view('cats.index', ['cats' =>  Cat::all()]);
     }
 }

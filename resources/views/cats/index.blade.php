@@ -33,7 +33,9 @@
                 <td>
                   <form role="form" action="{{route('cats.delete')}}" method="POST">
                     {!! csrf_field() !!}
+                    <input name="id" value="{{$cat->id}}" type="hidden">
                     <button type="submit" class="btn btn-primary" value="{{$cat->id}}"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  </form>
                 </td>
               </tr>
             @endforeach
