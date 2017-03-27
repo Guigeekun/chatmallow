@@ -20,6 +20,24 @@
   </div>
 </div>
 <ul class="timeline">
+@if(empty($timeline[0]))
+<li class="time-label">
+    <span class="bg-red">
+        {{date("l j F")}}
+    </span>
+</li>
+<li>
+    <i class="fa fa-frown-o bg-red"></i>
+    <div class="timeline-item">
+        <span class="time"><i class="fa fa-clock-o"></i> {{date("H:i")}}</span>
+
+        <h3 class="timeline-header"><a>Empty</a></h3>
+        <div class="timeline-body">
+          <p>Il n'y a aucun event.</p>
+        </div>
+    </div>
+</li>
+@else
 @foreach ($timeline as $events)
     <li class="time-label">
         <span class="bg-{{$color}}">
@@ -40,6 +58,7 @@
     </li>
   @endforeach
 @endforeach
+@endif
     <!-- END timeline item -->
     <li>
       <i class="fa fa-clock-o bg-gray"></i>

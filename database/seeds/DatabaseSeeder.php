@@ -16,20 +16,14 @@ class DatabaseSeeder extends Seeder
           'name' => 'admin',
           'email' => 'admin@gmail.com',
           'password' => bcrypt('admin'),
-          'api_token' => 'AZERTYUIOP',
+          'api_token' => str_random(30),
         ]);
 
         DB::table('cats')->delete();
         factory('App\Cat', 10)->create();
 
         DB::table('actions')->delete();
-        DB::table('actions')->insert([
-          'type' => '4',
-          'devices_id' => '1',
-          'executed' => '0',
-          'created_at' => \Carbon\Carbon::now()->toDateTimeString(),
-          'updated_at' => \Carbon\Carbon::now()->toDateTimeString()
-        ]);
+        factory('App\Actions', 5)->create();
 
       /*  Model::unguard();*/
 

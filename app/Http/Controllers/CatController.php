@@ -15,6 +15,7 @@ class CatController extends Controller
      */
     public function index()
     {
+        dd(DB::table('cats')->select('badgeid')->inRandomOrder()->first());
         return view('cats.index', ['cats' =>  Cat::all()]);
     }
 

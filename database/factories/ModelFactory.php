@@ -34,3 +34,17 @@ $factory->define(App\Cat::class, function (Faker\Generator $faker) {
         'allowedfood' => $faker->randomDigitNotNull,
     ];
 });
+
+$factory->define(App\Actions::class,function (Faker\Generator $faker){
+  if (rand(0,1)){
+    $type = random_int(1,4);
+  }else{
+    $type = DB::table('cats')->select('badgeid')->inRandomOrder()->first()->badgeid;
+  }
+  return [
+      'type' => $type,
+      'devices_id' => 1,
+      'executed' => 0,
+      'created_at' => $faker->dateTime($max = 'now', $timezone = date_default_timezone_get(), $min = '2017-03-08 15:47:00')
+  ];
+});

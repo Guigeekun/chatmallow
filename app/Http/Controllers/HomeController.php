@@ -48,9 +48,8 @@ class HomeController extends Controller
             $iconColor = "green";
             break;
        };
-       $date = explode(" ", $action->created_at);
-       $event = array('date' => $date[0],
-                      'hour' => implode(":", explode(":", $date[1], -1)),
+       $event = array('date' => strftime("%a %e %b %Y", strtotime($action->created_at)),
+                      'hour' => strftime("%R", strtotime($action->created_at)),
                       'type' => $info,
                       'MSGcontent' => $msgContent,
                       'icon' => $icon,
@@ -67,13 +66,6 @@ class HomeController extends Controller
       };//Construct $timeline
     };
     array_push($timeline, $events);//push the last array of $events in timeline
-
-    $timeline[] = [['date' => '2017-03-08',
-                   'hour' => '15:47',
-                   'type' => 'It lives !!',
-                   'MSGcontent' => 'First launch of Chatmallow !',
-                   'icon' => 'fa-rocket',
-                   'color' => 'navy']];// Add the "it lives !!" post on the timeline
 
     return view('home', ['timeline' => $timeline, 'color' => $colors[array_rand($colors)]]); //Query limité à un historique des 30 derniers events; on lit directement $action tant que le code est WIP.
   }
