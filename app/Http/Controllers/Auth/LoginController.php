@@ -11,6 +11,7 @@ use Illuminate\Cache\RateLimiter;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -98,7 +99,7 @@ class LoginController extends Controller
      */
     protected function credentials(Request $request)
     {
-        return ['email' => "admin@gmail.com", 'password' => $request->only('password')['password']];
+        return ['email' => DB::table('users')->select("email")->first()->email, 'password' => $request->only('password')['password']];
     }
 
     /**

@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
           'name' => 'admin',
           'email' => 'admin@gmail.com',
           'password' => bcrypt('admin'),
-          'api_token' => str_random(30),
+          'api_token' => 'AZERTYUIOP',
         ]);
 
         DB::table('cats')->delete();
