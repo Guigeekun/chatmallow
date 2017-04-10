@@ -119,7 +119,7 @@ return [
         [
             'text' => 'Cats',
             'icon' => 'paw',
-            'active' => ['cats', 'catsstore'],
+            'active' => ['cats', 'catscreate'],
             'submenu' => [
                 [
                     'text' => 'List',
