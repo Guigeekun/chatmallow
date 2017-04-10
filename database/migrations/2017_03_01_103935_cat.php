@@ -19,6 +19,7 @@ class Cat extends Migration
             $table->integer('icon');
             $table->string('badgeid');
             $table->integer('allowedfood');
+            $table->integer('usedfood');
             $table->timestamps();
         });
     }

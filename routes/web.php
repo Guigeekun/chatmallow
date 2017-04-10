@@ -35,4 +35,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/cats', ['as' => 'cats.delete', 'uses' => 'CatController@destroy']);
 
     Route::get('/config', 'ConfigController@index');
+
+    Route::get('/fonton', 'FontaineController@on');
+
+    Route::get('/food', 'FoodController@dist');
 });

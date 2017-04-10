@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class ActionController extends Controller
 {
@@ -18,9 +19,13 @@ class ActionController extends Controller
      */
     public function index()
     {
+      $response = DB::table('actions')
+                       ->where('executed',0)
+                       ->get();
         return response()->json([
             'success' => true,
-            'data' => Actions::all()
+            'data' => $response,
+
         ]);
     }
 }

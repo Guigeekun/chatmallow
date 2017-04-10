@@ -136,10 +136,12 @@ return [
         'COMMANDES',
         [
             'text' => 'Fontaine On/Off',
+            'url'  => '/fonton',
             'icon' => 'tint',
         ],
         [
             'text' => 'Distribution forcée',
+            'url'  => '/food',
             'icon' => 'cutlery',
         ],
         'PARAMETRES',
