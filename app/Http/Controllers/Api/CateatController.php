@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Actions;
+use App\Cat;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -19,10 +20,20 @@ class CateatController extends Controller
      */
     public function index($badgeid)
     {
-      $realbadgeid=DB::table('actions')
-                       ->where('badgeid','LIKE','`'.$badgeid.'`')
-                       ->get();
-
-        return '1';
+      $cat = Cat::where('badgeid','LIKE', $badgeid)->first();
+      if(isset($cat)){
+        if($cat['allowedfood'] > $cat['usedfood']){
+          Actions::insert([
+            'type' => $badgeid,
+            'devices_id' => 1,
+            'executed' => 1,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+          ]);
+          Cat::where('badgeid','LIKE','`'.$badgeid.'`')->increment('usedfood');
+          return '1';
+        };
+      };
+      return '0';
     }
 }

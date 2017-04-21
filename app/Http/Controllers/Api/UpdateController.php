@@ -11,18 +11,32 @@ use Illuminate\Support\Facades\DB;
 
 class UpdateController extends Controller
 {
+  /**
+   * Store water level state
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function updateWater($waterLevel){
+     $waterLevel = intval($waterLevel);
+     return var_dump($waterLevel);
+  }
 
-    /**
-     * Retrieve current user
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
-    {
-    DB::table('actions')
-        ->where('id',0)
-        ->update(['water_supply' => $request->('eau')])
-        ->update(['food_supply' => $request->('croquette')])
-    ;
+  /**
+   * Store food level state.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function updateFood($foodLevel){
+     return var_dump($foodLevel);
+  }
+
+  /**
+   * Update an action state.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function updateState($actionId)
+  {
+     return var_dump($actionId);
   }
 }
