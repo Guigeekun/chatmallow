@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CatController extends Controller
 {
@@ -97,6 +98,10 @@ return redirect('/cats');
     public function destroy(Request $request)
     {
       $cat = Cat::find($request->id);
+
+      DB::table('actions')
+              ->where('type', $cat->badgeid)
+              ->delete();
       $cat->delete();
       return view('cats.index', ['cats' =>  Cat::all()]);
     }
