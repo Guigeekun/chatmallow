@@ -18,7 +18,10 @@ class UpdateController extends Controller
    */
   public function updateWater($waterLevel){
      $waterLevel = intval($waterLevel);
-     return var_dump($waterLevel);
+     DB::table('devices')
+            ->where('id', 0)
+            ->update(['water_supply' => $waterLevel]);
+    return "1";
   }
 
   /**
@@ -27,7 +30,10 @@ class UpdateController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function updateFood($foodLevel){
-     return var_dump($foodLevel);
+    DB::table('devices')
+           ->where('id', 0)
+           ->update(['food_supply' => $foodLevel]);
+   return "1";
   }
 
   /**
@@ -37,6 +43,9 @@ class UpdateController extends Controller
    */
   public function updateState($actionId)
   {
-     return var_dump($actionId);
+    DB::table('devices')
+           ->where('id', $actionId)
+           ->update(['executed' => 1]);
+   return "1";
   }
 }
