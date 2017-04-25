@@ -22,10 +22,11 @@ class Kernel extends ConsoleKernel
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
-    protected function schedule(Schedule $schedule)
+    protected function schedule(Schedule $schedule) //Docs laravel: https://laravel.com/docs/5.4/scheduling ; Cron: https://help.ubuntu.com/community/CronHowto
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->call(function (){
+          DB::table('cats')->update(["usedfood" => 0]) //Each day, reset usedfood for all cats.
+        })->daily();
     }
 
     /**
