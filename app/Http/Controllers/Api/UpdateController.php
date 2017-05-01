@@ -43,7 +43,7 @@ class UpdateController extends Controller
    */
   public function updateState($actionId)
   {
-    DB::table('devices')
+    DB::table('actions')
            ->where('id', $actionId)
            ->update(['executed' => 1]);
    return "1";

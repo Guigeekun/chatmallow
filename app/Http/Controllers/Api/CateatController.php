@@ -20,7 +20,7 @@ class CateatController extends Controller
      */
     public function index($badgeid)
     {
-      $cat = Cat::where('badgeid','LIKE', $badgeid)->first();
+      $cat = Cat::where('badgeid', $badgeid)->first();
       if(isset($cat)){
         if($cat['allowedfood'] > $cat['usedfood']){
           Actions::insert([
@@ -30,7 +30,8 @@ class CateatController extends Controller
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
           ]);
-          Cat::where('badgeid','LIKE','`'.$badgeid.'`')->increment('usedfood');
+          Cat::where('badgeid',$badgeid)
+                              ->update(['usedfood' => $cat['usedfood']+1]);
           return '1';
         };
       };

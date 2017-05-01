@@ -25,8 +25,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule) //Docs laravel: https://laravel.com/docs/5.4/scheduling ; Cron: https://help.ubuntu.com/community/CronHowto
     {
         $schedule->call(function (){
-          DB::table('cats')->update(["usedfood" => 0]) //Each day, reset usedfood for all cats.
-        })->daily();
+          DB::table('cats')->update(["usedfood" => 0]); //Each day, reset usedfood for all cats.
+        }
+        )->daily();
     }
 
     /**
