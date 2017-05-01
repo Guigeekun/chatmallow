@@ -25,6 +25,14 @@ class DatabaseSeeder extends Seeder
         DB::table('actions')->delete();
         factory('App\Actions', 5)->create();
 
+
+        DB::table('devices')->delete();
+        DB::table('devices')->insert([
+          'id' => '0',
+          'is_powered' => '1',
+          'water_supply' => '0',
+          'food_supply' => '0'
+        ]);
       /*  Model::unguard();*/
 
 

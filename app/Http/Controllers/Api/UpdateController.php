@@ -19,7 +19,7 @@ class UpdateController extends Controller
   public function updateWater($waterLevel){
      $waterLevel = intval($waterLevel);
      DB::table('devices')
-            ->where('id', 0)
+            ->where('id', 1)
             ->update(['water_supply' => $waterLevel]);
     return "1";
   }
@@ -31,7 +31,7 @@ class UpdateController extends Controller
    */
   public function updateFood($foodLevel){
     DB::table('devices')
-           ->where('id', 0)
+           ->where('id', 1)
            ->update(['food_supply' => $foodLevel]);
    return "1";
   }

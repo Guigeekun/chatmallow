@@ -15,9 +15,7 @@ class Devices extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('cats_id');
             $table->boolean('is_powered');
-            $table->boolean('is_online');
             $table->integer('water_supply');
             $table->integer('food_supply');
             $table->timestamps();
