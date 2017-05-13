@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Actions;
 use App\Cat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -67,6 +68,14 @@ class HomeController extends Controller
     };
     array_push($timeline, $events);//push the last array of $events in timeline
 
-    return view('home', ['timeline' => $timeline, 'color' => $colors[array_rand($colors)]]); //Query limité à un historique des 30 derniers events; on lit directement $action tant que le code est WIP.
+     $supply=['food' => DB::table('devices')
+                        ->where('id', 1)
+                        ->select('food_supply')->get(),
+              'water' => DB::table('devices')
+                         ->where('id', 1)
+                         ->select('water_supply')->get()];
+
+
+    return view('home', ['timeline' => $timeline, 'color' => $colors[array_rand($colors)], 'supply' => $supply]); //Query limité à un historique des 30 derniers events; on lit directement $action tant que le code est WIP.
   }
 }

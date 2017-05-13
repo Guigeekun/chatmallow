@@ -11,8 +11,9 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-body">
-          <p>Global stats here !</p>
-          <h1>WIP</h1>
+          <p>{{$supply['food']}}</p>
+          <p>{{$supply['water']}}</p> 
+
       </div>
         <!-- /.box-body -->
     </div>
