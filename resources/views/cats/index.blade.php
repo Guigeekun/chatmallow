@@ -18,7 +18,7 @@
                 <th>name</th>
                 <th>ID</th>
                 <th>Created at</th>
-                <th>Food per day</th>
+                <th>Poids(Kg)</th>
                 <th>Delete ?</th>
               </tr>
             </thead>

@@ -22,7 +22,7 @@
                   <input class="form-control" name="name" placeholder="Enter cat name">
                 </div>
                 <div class="form-group">
-                  <label>Allowed food per day</label>
+                  <label>Poids (Kg)</label>
                   <input class="form-control" name="allowedfood" placeholder="Enter the number of meal per day">
                 </div>
                 <div class="form-group">
