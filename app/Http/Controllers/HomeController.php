@@ -17,6 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+    date_default_timezone_set('Europe/Paris');
     $colors = ["red", "yellow", "aqua", "teal", "olive", "orange", "fuchsia", "purple", "maroon"];
     $actions =  Actions::where([
                           ['type', '<>', '2'],

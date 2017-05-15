@@ -19,6 +19,7 @@
                 <th>ID</th>
                 <th>Created at</th>
                 <th>Cat weight(Kg)</th>
+                <th>Has ate today</th>
                 <th>Delete ?</th>
               </tr>
             </thead>
@@ -30,6 +31,7 @@
                 <td>{{$cat->id}}</td>
                 <td>{{$cat->created_at}}</td>
                 <td>{{$cat->allowedfood}}</td>
+                <td>{{$cat->usedfood}}</td>
                 <td>
                   <form role="form" action="{{route('cats.delete')}}" method="POST">
                     {!! csrf_field() !!}

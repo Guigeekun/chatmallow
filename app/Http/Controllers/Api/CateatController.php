@@ -22,7 +22,7 @@ class CateatController extends Controller
     {
       $cat = Cat::where('badgeid', $badgeid)->first();
       if(isset($cat)){
-        if($cat['allowedfood'] > $cat['usedfood']){
+        if($cat['usedfood'] < 1){
           Actions::insert([
             'type' => $badgeid,
             'devices_id' => 1,
@@ -30,11 +30,11 @@ class CateatController extends Controller
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
           ]);
-        //  Cat::where('badgeid',$badgeid)                      OLD FOOD
-          //                    ->update(['usedfood' => $cat['usedfood']+1]);
+          Cat::where('badgeid',$badgeid)
+                              ->update(['usedfood' => $cat['usedfood']+1]);
 
         // la faut convertire le poids en temps pour la vis sans fin
-        
+
           return '1';
         };
       };
