@@ -69,12 +69,7 @@ class HomeController extends Controller
     };
     array_push($timeline, $events);//push the last array of $events in timeline
 
-     $supply=['food' => DB::table('devices')
-                        ->where('id', 1)
-                        ->select('food_supply')->get(),
-              'water' => DB::table('devices')
-                         ->where('id', 1)
-                         ->select('water_supply')->get()];
+     $supply= DB::table('devices')->where('id', 1)->get()[0];
 
 
     return view('home', ['timeline' => $timeline, 'color' => $colors[array_rand($colors)], 'supply' => $supply]); //Query limité à un historique des 30 derniers events; on lit directement $action tant que le code est WIP.

@@ -10,11 +10,26 @@
 <div class="row">
     <div class="col-xs-12">
       <div class="box">
-        <div class="box-body">
-          <td><i class="fa fa-cutlery" aria-hidden="true"> </i> {{$supply['food']}}</td>
+        <div class="box-body" style="font-size: 3em; text-align: center;">
+          <td>
+            @if($supply->food_supply >= 80)
+              <i class="fa fa-cutlery" aria-hidden="true" style="color: green;">
+            @elseif($supply->food_supply >= 20)
+              <i class="fa fa-cutlery" aria-hidden="true" style="color: yellow;">
+            @else
+              <i class="fa fa-cutlery" aria-hidden="true" style="color: red;">
+            @endif
+          </i> {{$supply->food_supply}}%</td>
           <br>
-          <td><i class="fa fa-tint" aria-hidden="true"></i> {{$supply['water']}}</td>
-
+          <td>
+            @if($supply->food_supply >= 80)
+              <i class="fa fa-tint" aria-hidden="true" style="color: green;">
+            @elseif($supply->food_supply >= 20)
+              <i class="fa fa-tint" aria-hidden="true" style="color: yellow;">
+            @else
+              <i class="fa fa-tint" aria-hidden="true" style="color: red;">
+            @endif
+            </i> {{$supply->water_supply}}%</td>
       </div>
         <!-- /.box-body -->
     </div>
