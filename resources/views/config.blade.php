@@ -19,6 +19,9 @@
                 <dt>Version</dt>
                 <dd>Chatmallow BETA</dd>
                 <br>
+                <dt>Support physique</dt>
+                <dd>Chatmallow Manager (ce site) ne peux fonctionner qu'avec le support physique Chatmallow</dd>
+                <br>
                 <dt>Développement</dt>
                 <dd>Développé dans le cadre du PPE de Si 2017 au lycée Gustave Eiffel</dd>
                 <br>

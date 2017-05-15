@@ -16,10 +16,10 @@
               <tr>
                 <th>Icon</th>
                 <th>name</th>
-                <th>ID</th>
-                <th>Created at</th>
-                <th>Cat weight(Kg)</th>
                 <th>Has ate today</th>
+          <!-- <th>Created at</th> -->
+                <th>Cat weight(Kg)</th>
+                <th>ID</th>
                 <th>Delete ?</th>
               </tr>
             </thead>
@@ -28,10 +28,10 @@
               <tr>
                 <td><img src="../img/catIcon/{{$cat->icon}}.png" width="50px"></td>
                 <td>{{$cat->name}}</td>
-                <td>{{$cat->id}}</td>
-                <td>{{$cat->created_at}}</td>
-                <td>{{$cat->allowedfood}}</td>
                 <td>{{$cat->usedfood}}</td>
+          <!-- <td>{{$cat->created_at}}</td> -->
+                <td>{{$cat->allowedfood}}</td>        
+                <td>{{$cat->id}}</td>
                 <td>
                   <form role="form" action="{{route('cats.delete')}}" method="POST">
                     {!! csrf_field() !!}

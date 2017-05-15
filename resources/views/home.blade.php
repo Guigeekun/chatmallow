@@ -11,8 +11,9 @@
     <div class="col-xs-12">
       <div class="box">
         <div class="box-body">
-          <p>{{$supply['food']}}</p>
-          <p>{{$supply['water']}}</p> 
+          <td><i class="fa fa-cutlery" aria-hidden="true"> </i> {{$supply['food']}}</td>
+          <br>
+          <td><i class="fa fa-tint" aria-hidden="true"></i> {{$supply['water']}}</td>
 
       </div>
         <!-- /.box-body -->
