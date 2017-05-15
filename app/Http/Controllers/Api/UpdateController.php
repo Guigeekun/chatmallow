@@ -30,6 +30,13 @@ class UpdateController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function updateFood($foodLevel){
+    $foodLevel = 0.256*exp(-($foodLevel-1.22)/0.245)+99.845E-3; // foodlevel = distance
+    $foodLevel = ((pi()*($foodLevel^2*100))/3)*(3*25-($foodLevel*100)); //V = πh²(3R - h)÷3. donc volume de la calotte
+    $foodLevel = ($foodLevel*100)/32708.335; // et la on chope le poucentage avec 32708 en volume max
+    /*
+    4*pi
+    */
+    //Distance=0,256*Exp(-(Tension-1,22)/0,245)+99,845E-3
     DB::table('devices')
            ->where('id', 1)
            ->update(['food_supply' => $foodLevel]);

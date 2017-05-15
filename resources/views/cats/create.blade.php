@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                   <label>Cat weight(Kg)</label>
-                  <input class="form-control" name="allowedfood" placeholder="Enter the number of meal per day">
+                  <input class="form-control" name="allowedfood" placeholder="Enter the weight of your cat">
                 </div>
                 <div class="form-group">
                   <label>Badge ID</label>
