@@ -22,9 +22,9 @@
           </i> {{$supply->food_supply}}%</td>
           <br>
           <td>
-            @if($supply->food_supply >= 80)
+            @if($supply->water_supply >= 80)
               <i class="fa fa-tint" aria-hidden="true" style="color: green;">
-            @elseif($supply->food_supply >= 20)
+            @elseif($supply->water_supply >= 20)
               <i class="fa fa-tint" aria-hidden="true" style="color: yellow;">
             @else
               <i class="fa fa-tint" aria-hidden="true" style="color: red;">
