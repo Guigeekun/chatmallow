@@ -17,13 +17,18 @@
             <div class="box-body">
               <dl class="dl-horizontal">
                 <dt>Version</dt>
-                <dd>Chatmallow BETA</dd>
+                <dd>PROTO Chatmallow MNG</dd>
                 <br>
                 <dt>Support physique</dt>
                 <dd>Chatmallow Manager (ce site) ne peux fonctionner qu'avec le support physique Chatmallow</dd>
                 <br>
                 <dt>Développement</dt>
                 <dd>Développé dans le cadre du PPE de Si 2017 au lycée Gustave Eiffel</dd>
+                <br>
+                <dt>Composant</dt>
+                <dd><a href="https://laravel.com/">Laravel</a></dd>
+                <dd><a href="https://adminlte.io/themes/AdminLTE/index2.html">Admin LTE</a></dd>
+                <dd><a href="http://fontawesome.io/">Font Awesome</a></dd>
                 <br>
                 <dt>Développement web</dt>
                 <dd>MORIZOT Marvin</dd>
