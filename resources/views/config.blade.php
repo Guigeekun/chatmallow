@@ -53,7 +53,7 @@
                   <div class="box-body">
                     <dl class="dl-horizontal">
                       <dt>Water level</dt>
-                      <dd>Le niveau d'eau ne peux afficher que "~25%" ou "~75%" suite à des contraintes matérielles.</dd>
+                      <dd>Le niveau d'eau ne peux afficher que "~75%", "~50%" ou "~25%" suite à des contraintes matérielles.</dd>
                       <br>
                       <dt>Cats update</dt>
                       <dd>On ne peut pour l'instant pas mettre à jour les informations d'un chat, on peut cependant le supprimer et le recréer.</dd>

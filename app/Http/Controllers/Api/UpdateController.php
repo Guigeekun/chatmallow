@@ -27,6 +27,12 @@ class UpdateController extends Controller
      if ($waterLevel==2){
        DB::table('devices')
               ->where('id', 1)
+              ->update(['water_supply' => '50']);
+      return "1";
+     }
+     if ($waterLevel==3){
+       DB::table('devices')
+              ->where('id', 1)
               ->update(['water_supply' => '25']);
       return "1";
      }

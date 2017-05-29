@@ -44,6 +44,13 @@ default user is
 
 On Windows you should use [Laragon](https://laragon.org/) it contains composer and permit to host the site
 
+## And now ?
+
+Chatmallow Manager is supposed to work with the physical support Chatmallow
+Use the python script to make Chatmallow manager work with the arduino through the serial connection
+
+
+
 ### Used
 
 This project use [Laravel](https://laravel.com/) and [AdminLTE for laravel](https://packagist.org/packages/jeroennoten/laravel-adminlte)
