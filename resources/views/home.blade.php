@@ -29,7 +29,7 @@
             @else
               <i class="fa fa-tint" aria-hidden="true" style="color: red;">
             @endif
-            </i> {{$supply->water_supply}}%</td>
+          </i> ~{{$supply->water_supply}}%</td>
       </div>
         <!-- /.box-body -->
     </div>

@@ -18,10 +18,19 @@ class UpdateController extends Controller
    */
   public function updateWater($waterLevel){
      $waterLevel = intval($waterLevel);
-     DB::table('devices')
-            ->where('id', 1)
-            ->update(['water_supply' => $waterLevel]);
-    return "1";
+     if($waterLevel==1){
+       DB::table('devices')
+              ->where('id', 1)
+              ->update(['water_supply' => '75']);
+      return "1";
+     }
+     if ($waterLevel==2){
+       DB::table('devices')
+              ->where('id', 1)
+              ->update(['water_supply' => '25']);
+      return "1";
+     }
+
   }
 
   /**
