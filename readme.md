@@ -53,4 +53,41 @@ Use the python script to make Chatmallow manager work with the arduino through t
 
 ### Used
 
-This project use [Laravel](https://laravel.com/) and [AdminLTE for laravel](https://packagist.org/packages/jeroennoten/laravel-adminlte)
+This project use [Laravel](https://laravel.com/)
+[AdminLTE for laravel](https://packagist.org/packages/jeroennoten/laravel-adminlte)
+
+# French
+## Installation
+### Pré requis
+* php 7.0 (or newer)(and php7.0-xml)
+* composer
+* mySQL
+* apache server (only on prod)
+
+### Installation
+
+Les utilisateurs Windows peuvent utiliser [Laragon](https://laragon.org/)
+
+Clonez le projet et renommer ".env.exemple" en ".env" vous devez ensuite l’éditer que Chatmallow manager se connecte à votre base de donnée (ligne 7 à 12)
+
+faites `composer install` dans le dossier du projet pour créer les vendors
+
+Créer la clé d'application avec `php artisan key:generate`
+
+Ensuite vous devez préparer votre base de donnée `php artisan migrate:install` puis `php artisan migrate` puis `php artisan db:seed`
+
+Pour utiliser Laravel-mix et compiler les assets faites
+`npm install` (`npm install --no-bin-links` pour Windows !)
+( https://laravel.com/docs/5.4/mix#running-mix )
+
+Ensuite pour compiler utilisez `npm run production` (ou `npm run dev` pour une version decompréssé des assets)
+
+Maintenant vous pouvez lancer Chatmallow
+`php artisan serve`
+
+L'utilisateur par defaut est :
+* Mail : admin@gmail.com
+* MPD : admin
+* Nom d'utilisateur : admin
+
+Pour modifier cet utilisateur vous pouvez éditer le database seeder dans /database/seeds/DatabaseSeeder.php
